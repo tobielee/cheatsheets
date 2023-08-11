@@ -41,9 +41,21 @@ ls -lha
 * option `h` lists file sizes in more "human" readable format
 * option `a` lists all files (including hidden)
   
-##### copying things (cp)
+##### copying things (cp/scp)
 ```bash
 cp path/to/file_to_copy another/path/for/file_to_copy
+
+# copying local file to remote
+scp /path/to/local/file user@remote_server:/path/on/remote/server
+
+# copying local file to remote using key-based authentication
+scp -i /path/to/private/key /path/to/local/file user@remote_server:/path/on/remote/server
+
+# copying remote directory to local directory
+scp -r username@remote.ip:/path/to/source /path/to/destination
+
+# copying remote file to remote directory
+scp -i /path/to/private/key user1@remote_server1:/path/on/remote/server1/file user2@remote_server2:/path/on/remote/server2
 ```
 
 ##### moving things/cut'n'paste/rename (mv)
@@ -76,5 +88,9 @@ You can also use `vim path/to/file` if you want to read/write but you'll need to
 * clear: clear terminal console text
 * history: list of all previously executed commands
 * top: list current computer processes
+
+---
+
+## 
 
 
