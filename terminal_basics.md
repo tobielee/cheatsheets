@@ -89,6 +89,31 @@ You can also use `vim path/to/file` if you want to read/write but you'll need to
 * history: list of all previously executed commands
 * top: list current computer processes
 
+##### getting file/folder size info (du)
+
+for files or folders
+```bash
+du -h /path/to/file
+du -sh path/to/folder
+```
+
+for disk space use `df`
+```bash
+df -h
+```
+
+##### terminate specific job (top then kill id)
+
+use `top` to identify PID of job
+
+```bash
+kill PID
+```
+to force it (if above isn't working) 
+```bash
+kill -9 PID
+```
+
 ---
 
 ## 
