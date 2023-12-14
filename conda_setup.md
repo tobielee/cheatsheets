@@ -52,5 +52,5 @@ conda update --all
 
 ### Export conda environment yml
 ```bash
-conda env export --n myenv > myenv.yml
+conda env export --name myenv > myenv.yml
 ```
