@@ -50,4 +50,7 @@ conda uninstall pk1
 conda update --all
 ```
 
-
+### Export conda environment yml
+```bash
+conda env export --n myenv > myenv.yml
+```
