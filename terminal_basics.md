@@ -116,6 +116,15 @@ kill -9 PID
 
 ---
 
-## 
+### Run R script in background
+
+```bash
+nohup Rscript your_script.R > output.log 2>&1 &
+```
+- `nohup`: Runs a command immune to hangups, with output to a non-tty.
+- `Rscript` your_script.R: Specifies the R script to be executed.
+- `> output.log`: Redirects standard output to a file named output.log.
+- `2>&1`: Redirects standard error to the same file as standard output.
+- `&`: Puts the command in the background. 
 
 
