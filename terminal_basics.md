@@ -127,4 +127,19 @@ nohup Rscript your_script.R > output.log 2>&1 &
 - `2>&1`: Redirects standard error to the same file as standard output.
 - `&`: Puts the command in the background. 
 
+### Set up ssh keypair for remote server access
 
+1. Generate rsa key pair if you don't have one already
+```bash
+ssh-keygen -t rsa -b 2048
+```
+2. Copy public key to remote server
+```bash
+ssh-copy-id user@remote_server
+```
+you will be prompted to enter password to copy id
+
+3. You should be able to `ssh` access remote server without password prompt
+```bash
+ssh user@remote_server
+```
