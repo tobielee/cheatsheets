@@ -54,3 +54,40 @@ conda update --all
 ```bash
 conda env export --name myenv > myenv.yml
 ```
+
+# Setting up Mamba (faster variant of conda)
+
+Check channels (you want conda-forge)
+```bash
+conda config --show channels
+```
+If you don't have conda-forge, add it and make it top priority
+
+https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html
+
+Unix-like platforms (Mac OS & Linux)
+```bash
+wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+bash Miniforge3-$(uname)-$(uname -m).sh
+```
+
+OR on Mac OS you can also use homebrew
+```bash
+brew install --cask miniforge
+```
+
+Once you have miniforge you can add the conda-forge channel to conda
+
+```bash
+conda config --add channels conda-forge
+conda config --set channel_priority strict
+```
+
+You can manually do this by editing `~/.condarc`
+
+Finally install mamba
+```bash
+conda install mamba
+```
+
+
