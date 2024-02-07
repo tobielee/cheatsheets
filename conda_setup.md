@@ -90,4 +90,4 @@ Finally install mamba
 conda install mamba
 ```
 
-
+Now anywhere you see `conda` you should be able to use `mamba` (though I typically just use `mamba` for installing packages)
