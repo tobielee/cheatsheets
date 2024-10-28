@@ -41,7 +41,7 @@ ls -lha
 * option `h` lists file sizes in more "human" readable format
 * option `a` lists all files (including hidden)
   
-##### copying things (cp/scp)
+##### copying things (cp/scp/rsync)
 ```bash
 cp path/to/file_to_copy another/path/for/file_to_copy
 
@@ -56,6 +56,11 @@ scp -r username@remote.ip:/path/to/source /path/to/destination
 
 # copying remote file to remote directory
 scp -i /path/to/private/key user1@remote_server1:/path/on/remote/server1/file user2@remote_server2:/path/on/remote/server2
+
+# Using rsync to Copy Only Changed Files
+# The options -a ensures file attributes like permissions, timestamps, and symlinks are preserved;
+# -v enables verbose output; -h provides human-readable output; --progress monitors progress
+rsync -avh --progress /path/to/source_folder/ /path/to/destination_folder/
 ```
 
 ##### moving things/cut'n'paste/rename (mv)
