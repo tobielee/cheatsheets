@@ -52,7 +52,8 @@ conda update --all
 
 ### Export conda environment yml
 ```bash
-conda env export --name myenv > myenv.yml
+# use --no-builds for crossplatform compatibility
+conda env export --no-builds --name myenv > myenv.yml
 ```
 
 # Setting up Mamba (faster variant of conda)
