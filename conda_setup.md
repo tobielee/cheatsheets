@@ -21,10 +21,10 @@ conda create -n myenv
 conda activate myenv
 ```
 
-if you have environment as .txt or .yml; you can use `--file` instead of `-f` if you just have list of dependancies rather than YAML format
+if you have environment as .txt or .yml
 ```bash
-conda create -n ENVNAME -f ENV.txt
-conda env create -n ENVNAME -f ENV.yml
+conda create -n ENVNAME --file ENV.txt
+conda env create -n ENVNAME --file ENV.yml
 ```
 ### Modify/remove conda environment
 ```bash
